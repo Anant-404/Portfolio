@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.bg-gradient-mouse {
+  /* Circle radius = 200px. Tweak for bigger/smaller glow. */
+  background: radial-gradient(
+    circle 1000px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    /* Brighter center at 0% */
+    rgba(255, 204, 0, 0.2),
+    /* Gradually fade out around 70% */
+    rgba(255, 204, 0, 0.05),
+    /* Fully transparent by 100% */
+    transparent 
+  );
+  /* Slightly longer transition for color/opacity changes */
+  filter: blur(12px);
+  pointer-events: none; /* so it doesn't interfere with clicks */
+  transition: background 0.2s ease-out;
+  pointer-events: none;
+  z-index: 50; /* Ensure it's above other elements */
 }

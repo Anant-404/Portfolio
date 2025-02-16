@@ -1,18 +1,18 @@
 import type { Config } from "tailwindcss";
 
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        glow: "rgba(255, 255, 255, 0.15)",
+      },
+      boxShadow: {
+        glow: "0 0 60px rgba(255, 255, 255, 0.3)",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
