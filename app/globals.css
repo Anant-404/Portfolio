@@ -7,9 +7,9 @@
   background: radial-gradient(
     circle 1000px at var(--mouse-x, 50%) var(--mouse-y, 50%),
     /* Brighter center at 0% */
-    rgba(255, 204, 0, 0.2),
+    rgba(255, 167, 25, 0.2),
     /* Gradually fade out around 70% */
-    rgba(255, 204, 0, 0.05),
+    rgba(255, 167, 25, 0.05),
     /* Fully transparent by 100% */
     transparent 
   );
@@ -20,3 +20,25 @@
   pointer-events: none;
   z-index: 50; /* Ensure it's above other elements */
 }
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevents entire page from scrolling */
+}
+
+.scrollable-section {
+  overflow-y: auto;
+  max-height: 100vh; /* Ensures scrolling inside right section */
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Optional: Hide scrollbar for WebKit browsers */
+.scrollable-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+
