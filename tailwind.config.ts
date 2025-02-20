@@ -16,9 +16,9 @@ const config: Config = {
           lg: "80px",
         },
       },
-      colors: {
-        glow: "rgba(255, 255, 255, 0.15)",
-      },
+      // colors: {
+      //   glow: "rgba(255, 255, 255, 0.15)",
+      // },
       boxShadow: {
         glow: "0 0 60px rgba(255, 255, 255, 0.3)",
       },
