@@ -49,6 +49,7 @@ export default function Home() {
           {/* Main Content */}
 
          <main className=" container flex items-center justify-center min-h-screen text-white">
+            <h1 className="text-5xl">Anant Mishra</h1>
            <div className="text-center space-y-4">
              <h1 className="text-5xl font-bold">
                Building <span className="text-gray-400">innovative</span>, scalable, and <span className="text-gray-400">efficient</span> solutions.
