@@ -6,6 +6,7 @@ import github from "@/assets/github.png";
 import instagram from "@/assets/instagram.png";
 import linkdln from "@/assets/linkedin.png";
 import Headerlink from "./Headerlink";
+import { motion } from "framer-motion";
 
 
 const links = [
@@ -18,6 +19,58 @@ const links = [
  const Header = () => {
 
  const [open,setopen] = useState(false)
+
+ const topVar = {
+  closed: {
+    rotate: 0,
+  },
+  opened: {
+    rotate: 45,
+    backgroundColor: "rgb(255,255,255)",
+  },
+};
+const centerVar = {
+  closed: {
+    opacity: 1,
+  },
+  opened: {
+    opacity: 0,
+  },
+};
+
+const bottomVar = {
+  closed: {
+    rotate: 0,
+  },
+  opened: {
+    rotate: -45,
+    backgroundColor: "rgb(255,255,255)",
+  },
+};
+
+const listVar = {
+  closed: {
+    x: "100vw",
+  },
+  opened: {
+    x: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const listItemVar = {
+  closed: {
+    x: -10,
+    opacity: 0,
+  },
+  opened: {
+    x: 0,
+    opacity: 1,
+  },
+};
 
   return (
   
@@ -71,19 +124,41 @@ const links = [
        {/* HAMBURGER */}
        <div className="md:hidden">
         <button className="w-10 h-8 flex flex-col justify-between z-50 relative" onClick={(() => setopen(!open))}> 
-           <div className="w-10 h-1 bg-black rounded"></div>
-           <div className="w-10 h-1 bg-black rounded"></div>
-           <div className="w-10 h-1 bg-black rounded"></div>
+        <motion.div
+            variants={topVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
+          <motion.div
+            variants={centerVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded"
+          ></motion.div>
+          <motion.div
+            variants={bottomVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
         </button>
         {/* LIST */}
-        { open && 
-          
-        <div className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl">
-          {links.map(link => (
-            <Link href={link.url} key={link.title}>{link.title}</Link>
-          ))}
-        </div>
-        }
+        {open && (
+          <motion.div
+            variants={listVar}
+            initial="closed"
+            animate="opened"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+          >
+            {links.map((link) => (
+              <motion.div
+                variants={listItemVar}
+                className=""
+                key={link.title}
+              >
+                <Link href={link.url}>{link.title}</Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
        </div>
        </div>
     

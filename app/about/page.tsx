@@ -1,13 +1,18 @@
-import Header from '@/components/Header'
-import React from 'react'
+'use client'
+import { motion } from 'framer-motion'
 
 const about = () => {
   return (
     <>
-    <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-100">
-    <Header/>
-    <h1 className='text-black'>about</h1>
-    </div>
+    <motion.div
+      className="h-full"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
+
+        
+    </motion.div>
     </>
   )
 }
