@@ -52,6 +52,7 @@
 
       return (
         <>
+        <div className="min-h-screen w-full overflow-x-hidden">
         <div className="mx-[40px] mt-[32px]">
         <div className="absolute top-6 left-6 flex items-center gap-3 border border-white  px-2 py-2 rounded-full">
             <span className="text-sm ">{email}</span>
@@ -107,13 +108,13 @@
                 <p className="text-gray-500 text-lg">Crafting digital experiences with code.</p>
             
                 {/* Clickable Button  */} 
-                <Link href="/home" className="inline-block mt-4 px-6 py-3 bg-white text-black text-lg font-medium rounded-full transition-transform transform hover:scale-105">
+                <Link href="/land" className="inline-block mt-4 px-6 py-3 bg-white text-black text-lg font-medium rounded-full transition-transform transform hover:scale-105">
                   Explore My Work →
                 </Link>
               </div>
             </main>
             </div>
-          
+        </div>  
         </>
       );
     }
