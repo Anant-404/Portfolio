@@ -1,3 +1,4 @@
+'use client'
 import Lottie from "lottie-react";
 import brainAnimation from "@/assets/Animation - 1741007450899.json"; // Adjust the path
 
