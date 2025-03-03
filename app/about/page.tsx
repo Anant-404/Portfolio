@@ -312,12 +312,12 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
+        {/* <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
         <Lottie 
         animationData={Animation} 
         className="w-full max-w-[500px] h-auto"
       />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
