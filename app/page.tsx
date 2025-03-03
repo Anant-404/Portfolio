@@ -4,7 +4,7 @@
     import { useEffect,useState } from "react";
     import Image from "next/image";
     import pic from "@/assets/def.png";
-    import insta from "@/assets/instagram_1.png";
+    import insta from "@/assets/symbol_1.png";
     import github from "@/assets/Github_1.png";
 
     export default function Home() {
