@@ -1,6 +1,7 @@
 'use client';
-import Brain from "@/components/brain";
-import { motion, useInView, } from "framer-motion";
+import Lottie from "lottie-react";
+import Animation from "@/assets/Animation - 1741007450899.json";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import def from "@/assets/def.png";
@@ -312,7 +313,10 @@ const AboutPage = () => {
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
-          <Brain />
+        <Lottie 
+        animationData={Animation} 
+        className="w-full max-w-[500px] h-auto"
+      />
         </div>
       </div>
     </motion.div>
