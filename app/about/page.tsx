@@ -3,11 +3,11 @@ import Lottie from "lottie-react";
 import Animation from "@/assets/Animation - 1741007450899.json";
 import { motion, } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+// import { useRef } from "react";
 import def from "@/assets/def.png";
 
 const AboutPage = () => {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
 
   // const skillRef = useRef(null);
   // const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
@@ -23,7 +23,7 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-full overflow-scroll lg:flex" >
         {/* TEXT*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* About me*/}
