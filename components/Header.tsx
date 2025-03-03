@@ -91,7 +91,7 @@ const listItemVar = {
 
         {/* LINKS AND SOCIALS */}
         <div className="hidden md:flex gap-4 w-1/3">
-          <Link href="#">
+          <Link href="https://github.com/Anant-404">
            <Image 
             src={github}
             alt=""
@@ -141,12 +141,13 @@ const listItemVar = {
           ></motion.div>
         </button>
         {/* LIST */}
-        {open && (
+      {/* MENU LIST */}
+      {open && (
           <motion.div
             variants={listVar}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-[60]"
           >
             {links.map((link) => (
               <motion.div

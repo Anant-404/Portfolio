@@ -16,6 +16,8 @@ export default function TransitionProvider({ children }: { children: ReactNode }
     );
   }
 
+  
+
   return (
     <AnimatePresence mode="wait">
       <div
@@ -35,7 +37,7 @@ export default function TransitionProvider({ children }: { children: ReactNode }
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {pathName.substring(1)}
+          {pathName === "/land" ? "Hi there!" : pathName.substring(1)}
         </motion.div>
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30"

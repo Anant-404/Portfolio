@@ -4,6 +4,8 @@
     import { useEffect,useState } from "react";
     import Image from "next/image";
     import pic from "@/assets/def.png";
+    import insta from "@/assets/instagram_1.png";
+    import github from "@/assets/Github_1.png";
 
     export default function Home() {
       const [copied, setCopied] = useState(false);
@@ -54,7 +56,7 @@
         <>
         <div className="min-h-screen w-full overflow-x-hidden">
         <div className="mx-[40px] mt-[32px]">
-        <div className="absolute top-6 left-6 flex items-center gap-3 border border-white  px-2 py-2 rounded-full">
+        <div className=" absolute top-6 left-6 hidden md:flex  items-center gap-3 border border-white  px-2 py-2 rounded-full z-50">
             <span className="text-sm ">{email}</span>
             <button 
               onClick={handleCopy} 
@@ -64,12 +66,12 @@
           </div>
 
           {/* Top Right: Social Media Links */}
-          <div className="absolute top-6  right-[80px] flex gap-4 text-gray-400 text-sm ">
-            <Link href="https://linkedin.com/in/anant-mishra" className="hover:text-white transition">LinkedIn</Link>
+          <div className="absolute top-6  right-[80px] hidden md:flex  gap-4 text-gray-400 text-sm z-50 ">
+            {/* <Link href="https://linkedin.com/in/" className="hover:text-white transition">LinkedIn</Link> */}
+            {/* <span>/</span> */}
+            <Link href=" https://x.com/Anant_x7?t=-eusGQzUQIjexL1rYXIiSw&s=08 " className="hover:text-white transition">X (Twitter)</Link>
             <span>/</span>
-            <Link href="https://dribbble.com/anant-mishra" className="hover:text-white transition">X (Twitter)</Link>
-            <span>/</span>
-            <Link href="https://instagram.com/anant_mishra" className="hover:text-white transition">Instagram</Link>
+            <Link href="https://instagram.com/saber_.002" className="hover:text-white transition">Instagram</Link>
           </div>
           </div>
 
@@ -111,6 +113,14 @@
                 <Link href="/land" className="inline-block mt-4 px-6 py-3 bg-white text-black text-lg font-medium rounded-full transition-transform transform hover:scale-105">
                   Explore My Work →
                 </Link>
+                <div className="flex gap-2 justify-center">
+                  <Link href="https://instagram.com/saber_.002">
+                    <Image src={insta} alt="insta" width={50} height={50}/>
+                  </Link>
+                  <Link href="https://github.com/Anant-404">
+                    <Image src={github} alt="insta" width={43} height={43} className=""/>
+                  </Link>
+                </div>
               </div>
             </main>
             </div>
