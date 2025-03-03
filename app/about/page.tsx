@@ -24,9 +24,9 @@ const AboutPage = () => {
     >
       {/* CONTAINER */}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
-        {/* TEXT CONTAINER */}
+        {/* TEXT*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
-          {/* BIOGRAPHY CONTAINER */}
+          {/* About me*/}
           <div className="flex flex-col gap-12 justify-center">
           <Image
               src={def}
@@ -35,24 +35,24 @@ const AboutPage = () => {
               height={112}
               className="w-28 h-28 rounded-full object-cover"
             />
-            {/* BIOGRAPHY TITLE */}
+            {/*  TITLE */}
             <h1 className="font-bold text-2xl">About Me</h1>
-            {/* BIOGRAPHY DESC */}
+            {/* DESC */}
             <p className="text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               harum quibusdam cupiditate nobis accusamus sed aut aperiam,
               reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
               suscipit! Vel doloremque numquam quam nihil.
             </p>
-            {/* BIOGRAPHY QUOTE */}
+            {/*  QUOTE */}
             <span className="italic">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
-            {/* BIOGRAPHY SIGN SVG*/}
+            {/* SIGN SVG*/}
             <div className="self-end">
               
             </div>
-            {/* BIOGRAPHY SCROLL SVG */}
+            {/*  SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
