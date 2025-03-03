@@ -2,7 +2,7 @@
 import Lottie from "lottie-react";
 import brainAnimation from "@/assets/Animation - 1741007450899.json"; // Adjust the path
 
-const BrainAnimation = () => {
+const brain = () => {
   return (
     <div className="flex justify-center items-center w-full overflow-hidden">
       <Lottie 
@@ -13,4 +13,4 @@ const BrainAnimation = () => {
   );
 };
 
-export default BrainAnimation;
+export default brain;
