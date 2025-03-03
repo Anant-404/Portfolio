@@ -8,10 +8,7 @@ import img from "@/assets/def.png";
 const AboutPage = () => {
   const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
-
   const skillRef = useRef(null);
-  // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const experienceRef = useRef(null);
@@ -27,7 +24,7 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-auto lg:pr-0 xl:w-auto">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center">
           <Image
@@ -93,7 +90,7 @@ const AboutPage = () => {
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="font-bold text-2xl ml-[120px]"
+              className="font-bold text-2xl ml-[10px]"
             >
               SKILLS
             </motion.h1>
@@ -229,7 +226,7 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                    something
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
@@ -242,7 +239,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
+                    something
                   </div>
                 </div>
                 {/* CENTER */}
@@ -272,7 +269,7 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    Something
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
@@ -285,7 +282,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
+                   something
                   </div>
                 </div>
               </div>
@@ -322,8 +319,8 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-[100%] sticky top-0 z-30 xl:w-[100%]">
-          <Brain scrollYProgress={scrollYProgress} />
+        <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
+          <Brain />
         </div>
       </div>
     </motion.div>
