@@ -9,11 +9,11 @@ import def from "@/assets/def.png";
 const AboutPage = () => {
   const containerRef = useRef(null);
 
-  const skillRef = useRef(null);
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  // const skillRef = useRef(null);
+  // const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  const experienceRef = useRef(null);
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  // const experienceRef = useRef(null);
+  // const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
     <motion.div
@@ -77,11 +77,11 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* SKILLS CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div className="flex flex-col gap-12 justify-center">
             {/* SKILL TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
-              animate={isSkillRefInView ? { x: 0 } : {}}
+              // animate={isSkillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl ml-[10px]"
             >
@@ -90,7 +90,7 @@ const AboutPage = () => {
             {/* SKILL LIST */}
             <motion.div
               initial={{ x: "-300px" }}
-              animate={isSkillRefInView ? { x: 0 } : {}}
+              // animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -196,12 +196,12 @@ const AboutPage = () => {
           {/* EXPERIENCE CONTAINER */}
           <div
             className="flex flex-col gap-12 justify-center items-center pb-48"
-            ref={experienceRef}
+            
           >
             {/* EXPERIENCE TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              // animate={isExperienceRefInView ? { x: "0" } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
@@ -210,7 +210,7 @@ const AboutPage = () => {
             {/* EXPERIENCE LIST */}
             <motion.div
               initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              // animate={isExperienceRefInView ? { x: "0" } : {}}
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
