@@ -1,6 +1,6 @@
 'use client';
-import Lottie from "lottie-react";
-import Animation from "@/assets/Animation - 1741007450899.json";
+// import Lottie from "lottie-react";
+// import Animation from "@/assets/Animation - 1741007450899.json";
 import { motion, } from "framer-motion";
 import Image from "next/image";
 // import { useRef } from "react";
