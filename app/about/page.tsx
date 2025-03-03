@@ -1,10 +1,8 @@
 'use client';
 import dynamic from "next/dynamic";
-
-// Dynamically import Lottie without SSR
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
-import Animation from "@/assets/Animation - 1741007450899.json"; // Ensure correct import path
+import Animation from "@/assets/Animation - 1741007450899.json";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
