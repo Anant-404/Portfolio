@@ -1,19 +1,23 @@
 'use client';
-// import Lottie from "lottie-react";
-// import Animation from "@/assets/Animation - 1741007450899.json";
-import { motion, } from "framer-motion";
+import dynamic from "next/dynamic";
+
+// Dynamically import Lottie without SSR
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
+import Animation from "@/assets/Animation - 1741007450899.json"; // Ensure correct import path
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-// import { useRef } from "react";
+import { useRef } from "react";
 import def from "@/assets/def.png";
 
 const AboutPage = () => {
-  // const containerRef = useRef(null);
+  const containerRef = useRef(null);
 
-  // const skillRef = useRef(null);
-  // const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const skillRef = useRef(null);
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  // const experienceRef = useRef(null);
-  // const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const experienceRef = useRef(null);
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
     <motion.div
@@ -23,7 +27,7 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" >
+      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT*/}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* About me*/}
@@ -48,11 +52,11 @@ const AboutPage = () => {
             <span className="italic">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
-            {/* SIGN SVG*/}
+            {/*SIGN SVG*/}
             <div className="self-end">
               
             </div>
-            {/*  SCROLL SVG */}
+            {/* SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
@@ -77,11 +81,11 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* SKILLS CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* SKILL TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
-              // animate={isSkillRefInView ? { x: 0 } : {}}
+              animate={isSkillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl ml-[10px]"
             >
@@ -90,7 +94,7 @@ const AboutPage = () => {
             {/* SKILL LIST */}
             <motion.div
               initial={{ x: "-300px" }}
-              // animate={isSkillRefInView ? { x: 0 } : {}}
+              animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -196,12 +200,12 @@ const AboutPage = () => {
           {/* EXPERIENCE CONTAINER */}
           <div
             className="flex flex-col gap-12 justify-center items-center pb-48"
-            
+            ref={experienceRef}
           >
             {/* EXPERIENCE TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
-              // animate={isExperienceRefInView ? { x: "0" } : {}}
+              animate={isExperienceRefInView ? { x: "0" } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
@@ -210,7 +214,7 @@ const AboutPage = () => {
             {/* EXPERIENCE LIST */}
             <motion.div
               initial={{ x: "-300px" }}
-              // animate={isExperienceRefInView ? { x: "0" } : {}}
+              animate={isExperienceRefInView ? { x: "0" } : {}}
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
@@ -312,12 +316,12 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        {/* <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
+        <div className="hidden lg:block w-1/3 sticky top-[200px] z-30 xl:w-1/2 ">
         <Lottie 
         animationData={Animation} 
         className="w-full max-w-[500px] h-auto"
       />
-        </div> */}
+        </div>
       </div>
     </motion.div>
   );
