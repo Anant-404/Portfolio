@@ -47,7 +47,7 @@ const AboutPage = () => {
             </p>
             {/*  QUOTE */}
             <span className="italic">
-            "Building innovative solutions, one line of code at a time."
+            Building innovative solutions, one line of code at a time.
             </span>
             {/*SIGN SVG*/}
             <div className="self-end">
