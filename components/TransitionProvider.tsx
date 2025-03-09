@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react"; // Import ReactNode for proper typing
 
+
 export default function TransitionProvider({ children }: { children: ReactNode }) {
   const pathName = usePathname();
 
@@ -15,6 +16,11 @@ export default function TransitionProvider({ children }: { children: ReactNode }
         <div className="bg-[#000000] text-white">{children}</div>
     );
   }
+  // if (!pathName || pathName === "/mywork") {
+  //   return (
+  //       <div>{children}</div>
+  //   );
+  // }
 
   
 
