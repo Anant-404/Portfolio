@@ -109,7 +109,7 @@ const listItemVar = {
            
            />
           </Link>
-          <Link href="#">
+          <Link href="https://www.linkedin.com/in/anant-mishra-a1809b1b2/">
            <Image 
             src={linkdln}
             alt=""
