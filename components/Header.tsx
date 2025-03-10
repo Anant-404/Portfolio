@@ -83,7 +83,7 @@ const listItemVar = {
 
         {/* LOGO */}
         <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
-          <Link href="/land" className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
+          <Link href="/" className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
            <span className="text-white mr-1">Anant</span>
            <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">.dev</span>
           </Link>
@@ -147,7 +147,7 @@ const listItemVar = {
             variants={listVar}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-[60]"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-[40]"
           >
             {links.map((link) => (
               <motion.div
