@@ -1,6 +1,7 @@
 import TransitionProvider from "@/components/TransitionProvider";
 import "./globals.css";
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 
 import { Inter } from "next/font/google";
 
@@ -18,6 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body className={inter.className}>
         <TransitionProvider>{children}</TransitionProvider>
+        <Analytics />
       </body>
     </html>
   );
